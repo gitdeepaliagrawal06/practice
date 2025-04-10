@@ -1,0 +1,23 @@
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    margin: 50px;
+    border: 5px solid blue;
+    border: 10px dotted yellow;
+    outline: 10px dotted blue;
+    outline: 10px dashed blue;
+    outline-offset: 10px; 
+    border-top: 10px solid #49f7dd;
+    border-bottom: 10px solid rgb(148, 75, 216);
+    border-radius: 300px;
+    /* border-radius: 0px 200px 400px; */
+    box-shadow: 10px 0px 0px 0px black;
+
+
+
+    
+
+
+
+}
