@@ -13,4 +13,12 @@
     min-height: 500px;
     background-color: red;
     background: linear-gradient(to top, pink, skyblue);
+    border: 2px dashed black;
+}
+
+
+.form2 label:nth-child(1) {
+
+    display: inline-block;
+    width: 100px;
 }
