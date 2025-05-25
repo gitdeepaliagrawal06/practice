@@ -8,6 +8,87 @@
 </head>
 
 <body>
+    <h2>Job Application</h2>
+    <form class="MyForm">
+        <div>
+            <label for="">First Name</label>
+            <input type="text" placeholder="Enter First Name">
+        </div>
+        <div>
+            <label for="">Last Name</label>
+            <input type="text" placeholder="Enter Last Name">
+        </div>
+        <div>
+            <label for="">Email ID</label>
+            <input type="text" placeholder="Enter Email ID">
+        </div>
+        <div>
+            <label for="">Phome No</label>
+            <input maxlength="10" type="tel" placeholder="Enter Phone Number">
+        </div>
+        <div>
+            <label for="fileUpload">Resume</label>
+            <input type="file" name="fileUpload" id="fileUpload">
+        </div>
+        <div>
+            <label for="counter">Experince (in years)</label>
+            <input type="number" name="counter" id="counter" min="0" max="50">
+        </div>
+
+        <div>
+            <fieldset>
+                <legend>Skills:</legend>
+                <div>
+                    <input type="checkbox">
+                    <label for="">HTML</label>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <label for="">CSS</label>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <label for="">JavaScript</label>
+                </div>
+            </fieldset>
+        </div>
+        <div>
+            <label for="educationType">Highest Education</label>
+            <select name="educationType" id="educationType">
+                <option value="a">A</option>
+                <option value="b">B</option>
+                <option value="c">C</option>
+                <option value="d">D</option>
+                <option value="e">E</option>
+
+            </select>
+        </div>
+
+        <div>
+            <fieldset>
+                <legend>Availability:</legend>
+                <div>
+                    <label for="radio1">Full-time</label>
+                    <input type="radio" name="radio" id="radio1">
+                </div>
+                <div> <label for="radio2">Part-time</label>
+                    <input type="radio" name="radio" id="radio2">
+                </div>
+
+            </fieldset>
+        </div>
+
+        <div class="additional Comment">
+            <label for="textarea1">Additional Comments:</label>
+            <br>
+            <textarea rows="10" cols="40" name="textarea1" id="textarea1"></textarea>
+        </div>
+
+        <div>
+            <input type="submit" value="Submit Application">
+        </div>
+    </form>
+
 
 </body>
 
