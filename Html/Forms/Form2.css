@@ -1,24 +1,29 @@
-/* body {
-    background-color: red;
-} */
-
-
-.h1 {
-    text-align: center;
-    color: blue;
-    text-decoration: underline;
-}
-
-.form2 {
-    min-height: 500px;
-    background-color: red;
-    background: linear-gradient(to top, pink, skyblue);
-    border: 2px dashed black;
-}
-
-
-.form2 label:nth-child(1) {
-
+label:nth-child(1) {
+    /* background-color: red; */
+    width: 120px;
     display: inline-block;
-    width: 100px;
+}
+
+.MyForm div {
+    margin-bottom: 10px;
+    display: inline-flexs;
+    align-items: center;
+    gap: 5px;
+}
+
+.MyForm {
+    background: linear-gradient(to top, pink, skyblue);
+    padding: 5px;
+    outline: 2px dashed;
+    width: 500px;
+    margin: auto;
+}
+
+.MyForm .address {
+    display: flex;
+}
+
+.MyForm .mybtn {
+    width: max-content;
+    margin: auto;
 }
