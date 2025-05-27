@@ -5,13 +5,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* box-sizing: border-box; */
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            padding: 100px;
+        }
+
+        span {
+            border: 2px solid green;
+            width: 800px;
+            /* inline element me custom width and height apply ni kar sakta hai*/
+            height: 400px;
+            margin: 10px;
+            /* horizontaly margin apply kar sakte hai, vertically ni hoti hai inline element me.*/
+            padding: 15px;
+            /*padding apply ho jati hai*/
+        }
+
+        span {
+            border: 2px solid green;
+            width: 800px;
+            height: 400px;
+            margin: 10px;
+            padding: 15px;
+            display: block;
+            /* inline element ko customize kiya hai block element me */
+
+        }
+
+
+
+
+        /* div {
+            border: 1px solid red;
+            width: 300px;
+            height: 300px;
+            margin: 1px;
+            padding: 50px;
+        } */
+    </style>
 </head>
 
 <body>
 
-    <span>
-        hello world
-    </span>
+    <!-- <div>
+        Welcome to CodeHelp
+    </div>
+    <div>Welcome to codeHelp 2.0
+    </div> -->
+
+    <!-- <div class="box">
+        welcome to codeHelp
+    </div> -->
+    <span>This is love Babbar</span>
+    <span>This is love Babbar 2.0 </span>
+
 </body>
 
 </html>
