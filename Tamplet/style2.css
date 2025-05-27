@@ -1,19 +1,12 @@
 * {
     padding: 0;
     margin: 0;
-
 }
 
-.sec1 {
+.sec {
     background-color: red;
     height: 100vh;
     background: url(./successful-team-cheerful-young-p.jpg);
     background-size: contain;
     background-position: center;
-
-    /* .filter {
-        background: linear-gradient(to left, #151516f2, #0e0e0eeb);
-        height: 100%;
-    } */
-
 }
