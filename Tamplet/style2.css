@@ -3,10 +3,66 @@
     margin: 0;
 }
 
-.sec {
+body {
+    font-family: Montserrat, sans-serif;
+}
+
+.sec1 {
     background-color: red;
     height: 100vh;
     background: url(./successful-team-cheerful-young-p.jpg);
-    background-size: contain;
+    background-size: cover;
     background-position: center;
+
+    .box1 div:nth-child(1) {
+        color: black;
+        font-weight: 200;
+        font-size: 10PX;
+        /* letter-spacing: 1px; */
+    }
+
+    .box1 div:nth-child(2) {
+        color: black;
+        font-size: 22px;
+        font-weight: 100;
+        /* letter-spacing: 1px; */
+
+
+    }
+
+
+    .A1 {
+        line-height: 40px;
+        margin: 5px 0;
+    }
+
+    .A1 div:nth-child(1) {
+        color: darkorange;
+        font-size: 50px;
+        font-weight: bolder
+    }
+
+    .A1 div:nth-child(2) {
+        color: black;
+        font-size: 50px;
+        font-weight: bolder
+    }
+
+    .A1 div:nth-child(3) {
+        color: purple;
+        font-size: 50px;
+        font-weight: bolder
+    }
+
+    .box1 div:nth-child(6) {
+        color: black;
+        font-size: x-small;
+        font-weight: 300
+    }
+}
+
+.fr {
+    height: 100%;
+    background: rgba(255, 255, 255, 0.882);
+
 }
