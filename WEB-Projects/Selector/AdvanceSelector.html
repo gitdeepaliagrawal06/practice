@@ -6,7 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        
+        /* Descendant Selector */
+        .First-Container p {
+            color: red;
+        }
+
+        /*Both are descendant Selector*/
+        div p {
+            color: red;
+        }
     </style>
 
 
@@ -14,7 +22,7 @@
 
 <body>
     <!--Container 1-->
-    <div>
+    <div class="First-Container">
         <p>Main Para</p>
         <p>Sub para</p>
         <h3>Some heading</h3>
