@@ -14,6 +14,11 @@ body {
     background-size: cover;
     background-position: center;
 
+    .fr {
+        height: 100%;
+        background: rgba(255, 255, 255, 0.882);
+    }
+
     .box1 div:nth-child(1) {
         color: black;
         font-weight: 200;
@@ -26,10 +31,7 @@ body {
         font-size: 22px;
         font-weight: 100;
         /* letter-spacing: 1px; */
-
-
     }
-
 
     .A1 {
         line-height: 40px;
@@ -59,10 +61,53 @@ body {
         font-size: x-small;
         font-weight: 300
     }
-}
 
-.fr {
-    height: 100%;
-    background: rgba(255, 255, 255, 0.882);
+    .box3 h3 {
+        color: darkorange;
+        font-size: 20px;
+        font-weight: bolder
+    }
+
+    .box3 li:nth-child(1) {
+        color: rgb(30, 30, 29);
+        font-size: 15px;
+        font-weight: 400
+    }
+
+    .box3 li:nth-child(2) {
+        color: rgb(30, 30, 29);
+        font-size: 15px;
+        font-weight: 400
+    }
+
+    .box3 li:nth-child(3) {
+        color: rgb(30, 30, 29);
+        font-size: 15px;
+        font-weight: 400
+    }
+
+    .box3 li:nth-child(4) {
+        color: rgb(30, 30, 29);
+        font-size: 15px;
+        font-weight: 400
+    }
+
+    .box3 li:nth-child(5) {
+        color: rgb(30, 30, 29);
+        font-size: 15px;
+        font-weight: 400
+    }
+
+    .box3 h4 {
+        color: darkorange;
+        font-size: 20px;
+        font-weight: bolder
+    }
+
+    box3 h4 {
+        color: purple;
+        font-size: 20px;
+        font-weight: bolder
+    }
 
 }
