@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checked-Box-Pseudo-Class</title>
+    <style>
+        /*Style the custom checkbox (using label) */
+        label {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: lightgrey;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /*Change label background-color when checkbox is checked*/
+        input[type="checkbox"]:checked+label {
+            background-color: lightgreen;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!--The checkbox and its coreesponding label -->
+    <input type="checkbox" id="checkbox">
+    <label for="checkbox">Check me!</label>
+</body>
+
+</html>

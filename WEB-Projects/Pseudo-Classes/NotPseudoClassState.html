@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not-Pseudo-Class</title>
+    <!--Select only those "p" which dose not have class name "highlight"-->
+    <style>
+        .highlight {
+            background-color: yellow;
+            color: black;
+        }
+
+        p:not(.highlight) {
+            background-color: lightpink;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>This will be styled by :not()</p>
+    <p class="highlight">This is a highlighted paragraph</p>
+    <p>This will also be styled by :not()</p>
+
+</body>
+
+</html>
