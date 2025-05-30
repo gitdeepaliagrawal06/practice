@@ -63,6 +63,7 @@ body {
         font-size: 22px;
         font-weight: 100;
         /* letter-spacing: 1px; */
+
     }
 
     .A1 {
@@ -184,6 +185,18 @@ body {
         height: 500px;
         width: 250px;
         position: relative;
+        transform: translateX(-51px) scale(1.025);
+
+        img {
+            width: 188%;
+            position: absolute;
+            z-index: 2;
+            bottom: -138px;
+            /* right: 5px; */
+            left: -49px;
+            filter: drop-shadow(14px 4px 20px black);
+        }
+
 
     }
 
@@ -200,7 +213,8 @@ body {
     }
 
     .circle2 {
-        background-color: darkorange;
+        /* background-color: darkorange; */
+        background: linear-gradient(to right, #e9a933, darkorange);
         width: 300px;
         height: 100%;
         /* border-top-left-radius: 50px; */
@@ -219,6 +233,22 @@ body {
         position: absolute;
         bottom: -50px;
         right: -70px;
+
+    }
+}
+
+/* 192.168.29.58:5500/index2.html */
+
+@media (max-width:720px) {
+
+    .sec1 {
+        height: unset;
+    }
+
+    .sec1 .fr {
+        padding: 100px 0;
+        flex-direction: column;
+        gap: 100px;
 
     }
 }

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brand Website</title>
+    <style>
+        /* Reset some styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 15px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Hero section */
+        .hero {
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .hero .btn {
+            background-color: #00b894;
+            color: #fff;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        /* Portfolio section */
+        .portfolio {
+            padding: 50px 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .portfolio h3 {
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .portfolio-item {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* About Us section */
+        .about {
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+
+        .about h3 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+
+        .about-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            flex: 1 1 250px;
+            max-width: 300px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        /* Contact Us */
+        .contact {
+            padding: 50px 20px;
+            background-color: #f4f4f4;
+        }
+
+        .contact h3 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #00b894;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2d3436;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Responsive styles */
+        @media(max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav {
+                margin-top: 10px;
+            }
+
+            .about-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            /* No change needed for other sections as grid and flex wrap handle responsiveness */
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Brand Name</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>We Build Brand</h2>
+        <p>Delivering innovative solutions to elevate your business and create a lasting impact online.</p>
+        <a href="#" class="btn">Get Started</a>
+    </section>
+
+    <section class="portfolio">
+        <h3>Our Portfolio</h3>
+        <div class="portfolio-grid">
+            <div class="portfolio-item" title="Digital Marketing"><img
+                    src="https://img.icons8.com/color/96/000000/marketing.png" alt="Marketing" /></div>
+            <div class="portfolio-item" title="Social Media"><img
+                    src="https://img.icons8.com/color/96/000000/social-media.png" alt="Social Media" /></div>
+            <div class="portfolio-item" title="Strategy"><img src="https://img.icons8.com/color/96/000000/strategy.png"
+                    alt="Strategy" /></div>
+            <div class="portfolio-item" title="Analysis"><img
+                    src="https://img.icons8.com/color/96/000000/business-analytics.png" alt="Analysis" /></div>
+            <div class="portfolio-item" title="Market Research"><img
+                    src="https://img.icons8.com/color/96/000000/research.png" alt="Market Research" /></div>
+        </div>
+    </section>
+
+    <section class="about">
+        <h3>About Us</h3>
+        <div class="about-cards">
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Woman" />
+                <h4>Jane Doe</h4>
+                <p>Creative Director with over 10 years of experience in branding and digital marketing.</p>
+            </div>
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Man" />
+                <h4>John Smith</h4>
+                <p>Strategy Expert focused on innovative solutions and market insights.</p>
+            </div>
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Woman" />
+                <h4>Emily Johnson</h4>
+                <p>Social Media Specialist with a passion for creating engaging campaigns.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h3>Contact Us</h3>
+        <form>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Your Brand. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
