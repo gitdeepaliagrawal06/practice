@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex by love bhaiya</title>
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        } */
+
+        .container {
+            height: 800px;
+            background-color: beige;
+            border: 5px solid black;
+            padding: 2px;
+            margin: 2px;
+            display: flex;
+            flex-direction: row;
+            /* flex-wrap: wrap; */
+            justify-content: start;
+            align-items: start;
+            align-content: center;
+
+
+
+
+        }
+
+        .box {
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            margin: 2px;
+            padding: 2px;
+        }
+
+        #box1 {
+            background-color: aqua;
+            order: 500;
+            /* flex-shrink: 4; */
+            /* flex-grow: 5; */
+            /* flex-basis: 400; */
+            /* flex-shrink: 4; */
+            align-self: end;
+
+
+        }
+
+        #box2 {
+            background-color: rgb(140, 95, 183);
+            /* flex-grow: 1; */
+        }
+
+        #box3 {
+            background-color: rgb(227, 195, 79);
+            /* flex-grow: 1; */
+        }
+
+        #box4 {
+            background-color: rgb(185, 98, 165);
+            order: -1;
+            /* flex-grow: 1; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box1"> Box 1</div>
+        <div class="box" id="box2">Box 2</div>
+        <div class="box" id="box3">Box 3</div>
+        <div class="box" id="box4">Box 4</div>
+
+    </div>
+</body>
+
+</html>
