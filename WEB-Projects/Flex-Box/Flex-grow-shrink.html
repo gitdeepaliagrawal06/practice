@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Grow and Shrink</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            border: 5px solid black;
+        }
+
+        .container {
+            display: flex;
+
+            gap: 10px;
+            width: 80%;
+            background-color: darkorange;
+
+        }
+
+        /*Base style for all buttons*/
+        .btn {
+            width: 100px;
+            padding: 10px;
+            font-size: 16px;
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        /*Flex grow and shrink behavior*/
+        .btn1 {
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+
+        .btn2 {
+            flex-grow: 2;
+            flex-shrink: 1;
+        }
+
+        .btn3 {
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button class="btn btn1">Button 1</button>
+        <button class="btn btn2">Button 2</button>
+        <button class="btn btn3">Button 3</button>
+    </div>
+</body>
+
+</html>

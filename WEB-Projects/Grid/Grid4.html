@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid by Kodnest</title>
+    <style>
+        .outer {
+            border: 2px solid red;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            /* Declared Column*/
+            grid-template-rows: 1fr 1fr 1fr;
+            /* Declared portions of availabe space Column*/
+            row-gap: 10px;
+            column-gap: 10px;
+            padding: 5px;
+            height: 100vh;
+
+        }
+
+        .outer div {
+            border: 2px solid black;
+            background-color: yellow;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: cursive;
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        /* .p6 {
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        } */
+
+        .p6 {
+            grid-row: 1/2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="p1">Product 1</div>
+        <div class="p2">Product 2</div>
+        <div class="p3">Product 3</div>
+        <div class="p4">Product 4</div>
+        <div class="p5">Product 5</div>
+        <div class="p6">Product 6</div>
+    </div>
+</body>
+
+</html>
