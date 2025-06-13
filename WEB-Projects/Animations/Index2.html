@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation By Love bhaiya</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+
+            width: 100vw;
+            height: 100vh;
+            background-color: beige;
+            border: 5px solid black;
+        }
+
+        .box {
+            width: 350px;
+            height: 80px;
+            background-color: blue;
+            border: 3px solid red;
+            border-radius: 10px;
+            margin: 10px;
+            position: relative;
+
+            /* animation: jk;
+            animation-duration: 5s;
+            animation-iteration-count: 2; */
+            /* animation-delay: 2s; */
+            /* animation-timing-function: ease-out; */
+            /* animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1); */
+            /* animation-timing-function: linear; */
+            /* animation-direction: alternate; */
+            /* animation-fill-mode: backwards; */
+            /* animation-fill-mode: both; */
+
+            /* @keyframes duration | easing-function | delay |
+iteration-count | direction | fill-mode | play-state | name */
+            animation: 5s ease-in 1s infinite alternate none running rightMove;
+        }
+
+
+        @keyframes righMove {
+
+            from {
+                top: 0;
+                left: 0;
+            }
+
+            to {
+                top: 0;
+                left: 1200px;
+            }
+        }
+
+
+        #box2 {
+
+            width: 350px;
+            height: 80px;
+            background-color: blue;
+            border: 3px solid red;
+            border-radius: 10px;
+            margin: 10px;
+            position: relative;
+            animation: 5s ease-in 1s infinite alternate none running leftMove;
+        }
+
+        @keyframes leftMove {
+
+            from {
+                top: 500px;
+                left: 1200px;
+            }
+
+            to {
+                top: 500 px;
+                left: 0;
+            }
+        }
+
+        #circle {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            border: 2px solid red;
+            border-radius: 50px;
+            margin: 10px;
+            position: relative;
+            top: 20%;
+            left: 40%;
+
+            animation: 5s ease-in 1s infinite alternate none running circleMove;
+        }
+
+
+        @keyframes circleMove {
+
+            0% {
+                top: 1%;
+                left: 5%;
+            }
+
+            30% {
+                top: 5%;
+                left: 90%;
+            }
+
+            60% {
+                top: 70%;
+                left: 10%;
+            }
+
+            100% {
+                top: 70%;
+                left: 90%
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+
+        </div>
+        <div id="box2"></div>
+
+        <div id="circle"></div>
+
+
+    </div>
+</body>
+
+</html>

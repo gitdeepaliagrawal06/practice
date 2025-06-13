@@ -4,19 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Animation by Manish bhaiya</title>
     <style>
         .box {
-            --w: 300px;
+            --w: 100px;
             width: var(--w);
             height: var(--w);
             background: url(./cartoony-penguin-studio_23-21510.png);
             background-size: cover;
-            transition: all .6s;
-            transform-origin: 0 100%;
-            transform: scale(1) rotate(0deg);
-            margin: 100px;
+            transition: all 15s;
+            transform-origin: 50% 100%;
+            transform: scale(1) translate(0, 0) skew(0deg, 0deg);
+
+
+            /* margin: 100px; */
+            margin-top: 100px;
             background-color: blueviolet;
+            font-size: 100PX;
+            font-weight: 900;
+            animation-name: jk;
+            animation-duration: 3s;
+            animation-iteration-count: 3;
+            /* animation-delay: 10s; */
+        }
+
+        @keyframes jk {
+            0% {
+                transform: translateX(0);
+            }
+
+
+            100% {
+                transform: translateX(500px);
+            }
         }
 
         /*  */
@@ -25,8 +45,9 @@
 
 <body>
     <div class="box">
-        1
+
     </div>
+
 </body>
 
 </html>
