@@ -22,24 +22,44 @@
             background-color: blueviolet;
             font-size: 100PX;
             font-weight: 900;
-            animation-name: jk;
-            animation-duration: 3s;
-            animation-iteration-count: 3;
+            /* animation-name: jk;
+            animation-duration: 6s;
+            animation-iteration-count: 1; */
             /* animation-delay: 10s; */
+
+            /*Short handed property*/
+            animation: jk 3s infinite alternate;
         }
 
         @keyframes jk {
             0% {
-                transform: translateX(0);
+                transform: translate(0, 0);
             }
 
+
+            25% {
+                transform: translate(400px, 0);
+
+            }
+
+            50% {
+                transform: translate(400px, 0px);
+                background: url(./cute-penguin-standing-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-premium_138676-4656.avif);
+                background-size: contain;
+                border: 5px solid;
+                border-radius: 50%;
+
+            }
+
+            75% {
+                transform: translate(0, 400px);
+
+            }
 
             100% {
-                transform: translateX(500px);
+                transform: translate(0, 0);
             }
         }
-
-        /*  */
     </style>
 </head>
 
@@ -47,6 +67,7 @@
     <div class="box">
 
     </div>
+
 
 </body>
 
