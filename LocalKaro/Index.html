@@ -1,80 +1,271 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Append Form Data to XLS</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Expert Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            padding: 30px;
+        }
+
+        form {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        fieldset {
+            border: none;
+            padding: 0;
+        }
+
+        legend {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 12px 0 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        button {
+            padding: 12px 24px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .time-select-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .time-select-group select {
+            flex: 1;
+        }
+    </style>
 </head>
 
 <body>
-    <h2>Form to Excel (Append Data)</h2>
-    <form id="myForm">
+    <form id="expertForm">
+        <fieldset>
+            <legend>Service Expert Form</legend>
 
-        Name: <input type="text" name="name" required><br><br>
+            <label>First Name</label>
+            <input type="text" name="first_name" required>
 
-        Email: <input type="email" name="email" required><br><br>
+            <label>Last Name</label>
+            <input type="text" name="last_name" required>
 
-        Phone: <input type="text" name="phone" required><br><br>
-        <button type="submit">Add & Download XLS</button>
+            <label>Phone</label>
+            <input type="tel" name="phone" required pattern="[0-9+\-\(\) ]{7,20}">
+
+            <label>Email</label>
+            <input type="email" name="email" required>
+
+            <label>Gender</label>
+            <input type="radio" name="gender" value="Male" required> Male
+            <input type="radio" name="gender" value="Female"> Female
+            <input type="radio" name="gender" value="Other"> Other
+
+            <label>Age</label>
+            <input type="text" name="age" required>
+
+            <label>Education</label>
+            <select name="education" required>
+                <option value="">Select</option>
+                <option value="Below 8th">Below 8th</option>
+                <option value="10th Standard">10th Standard</option>
+                <option value="12th Standard">12th Standard</option>
+                <option value="Graduation">Graduation</option>
+                <option value="Post Graduation">Post Graduation</option>
+                <option value="Diploma">Diploma</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label>Address (with City & Pincode)</label>
+            <input type="text" name="address" required>
+
+            <label>Service Category</label>
+            <select name="service_category" required>
+                <option value="">Select</option>
+                <option value="Appliance Repair & Maintenance">Appliance Repair & Maintenance</option>
+                <option value="Automobile Services">Automobile Services</option>
+                <option value="Beauty & Grooming">Beauty & Grooming</option>
+                <option value="Cleaning & Sanitation">Cleaning & Sanitation</option>
+                <option value="Construction & Renovation">Construction & Renovation</option>
+                <option value="Education & Coaching">Education & Coaching</option>
+                <option value="Events & Photography">Events & Photography</option>
+                <option value="Health & Wellness">Health & Wellness</option>
+                <option value="Home Services">Home Services</option>
+                <option value="Legal & Financial Services">Legal & Financial Services</option>
+                <option value="Miscellaneous Services">Miscellaneous Services</option>
+                <option value="Other">Other</option>
+                <option value="Packers & Movers">Packers & Movers</option>
+            </select>
+
+            <label>Service Sub-Category</label>
+            <select name="service_sub_category">
+                <option value="">Select</option>
+            </select>
+
+            <label>Year of Experience</label>
+            <input type="text" name="experience" required>
+
+            <label>Charges Type</label>
+            <select name="charges_type" required>
+                <option value="">Select</option>
+                <option value="Per Hour">Per Hour</option>
+                <option value="Per Day">Per Day</option>
+                <option value="Based on Work">Based on Work</option>
+            </select>
+
+            <label>Work Timing (From)</label>
+            <div class="time-select-group">
+                <select name="work_timing_from_hour" required>
+                    <option value="">Hour</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <select name="work_timing_from_minute" required>
+                    <option value="">Minute</option>
+                    <option value="00">00</option>
+                    <option value="30">30</option>
+                </select>
+                <select name="work_timing_from_period" required>
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                </select>
+            </div>
+
+            <label>Work Timing (To)</label>
+            <div class="time-select-group">
+                <select name="work_timing_to_hour" required>
+                    <option value="">Hour</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <select name="work_timing_to_minute" required>
+                    <option value="">Minute</option>
+                    <option value="00">00</option>
+                    <option value="30">30</option>
+                </select>
+                <select name="work_timing_to_period" required>
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                </select>
+            </div>
+
+            <label>Service Area</label>
+            <input type="text" name="service_area" required>
+
+            <label>Upload Your Photo</label>
+            <input type="file" name="photo" accept="image/jpeg,image/png,image/gif" required>
+
+            <label>Any Other Information</label>
+            <textarea name="other_info" rows="5" required></textarea>
+
+            <label>Referred By</label>
+            <input type="text" name="referred_by" required>
+
+            <button type="submit">Submit & Download XLS</button>
+        </fieldset>
     </form>
 
     <script>
+        const allData = [];
+        const form = document.getElementById("expertForm");
 
-        const allRows = []; // Store all submitted rows
-
-        document.getElementById("myForm").addEventListener("submit", function (e) {
-
+        form.addEventListener("submit", function (e) {
             e.preventDefault();
+            const data = new FormData(form);
+            const row = [];
 
-            const name = this.name.value.trim();
+            for (const [name, value] of data.entries()) {
+                if (name !== "photo") row.push(value); // Exclude photo binary
+            }
 
-            const email = this.email.value.trim();
+            allData.push(row);
 
-            const phone = this.phone.value.trim();
+            const header = [
+                "First Name", "Last Name", "Phone", "Email", "Gender", "Age", "Education", "Address",
+                "Service Category", "Service Sub-Category", "Experience", "Charges Type",
+                "Work From Hour", "From Min", "From Period", "To Hour", "To Min", "To Period",
+                "Service Area", "Other Info", "Referred By"
+            ];
 
-            if (!name || !email || !phone) return;
-
-            // Add new row
-
-            allRows.push([name, email, phone]);
-
-            // Create Excel content
-
-            let xlsContent = "Name\tEmail\tPhone\n"; // Header
-
-            allRows.forEach(row => {
-
-                xlsContent += row.join("\t") + "\n";
-
+            let xls = header.join("\t") + "\n";
+            allData.forEach(entry => {
+                xls += entry.join("\t") + "\n";
             });
 
-            // Create blob and trigger download
-
-            const blob = new Blob([xlsContent], {
-
-                type: "application/vnd.ms-excel",
-
-            });
-
+            const blob = new Blob([xls], { type: "application/vnd.ms-excel" });
             const url = URL.createObjectURL(blob);
-
             const a = document.createElement("a");
-
             a.href = url;
-
-            a.download = "form_data.xls";
-
+            a.download = "ServiceExpertData.xls";
             document.body.appendChild(a);
-
             a.click();
-
             document.body.removeChild(a);
-
             URL.revokeObjectURL(url);
 
-            // Clear form
-
-            this.reset();
-
+            form.reset();
         });
     </script>
 </body>
