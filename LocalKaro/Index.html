@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Append Form Data to XLS</title>
+</head>
+
+<body>
+    <h2>Form to Excel (Append Data)</h2>
+    <form id="myForm">
+
+        Name: <input type="text" name="name" required><br><br>
+
+        Email: <input type="email" name="email" required><br><br>
+
+        Phone: <input type="text" name="phone" required><br><br>
+        <button type="submit">Add & Download XLS</button>
+    </form>
+
+    <script>
+
+        const allRows = []; // Store all submitted rows
+
+        document.getElementById("myForm").addEventListener("submit", function (e) {
+
+            e.preventDefault();
+
+            const name = this.name.value.trim();
+
+            const email = this.email.value.trim();
+
+            const phone = this.phone.value.trim();
+
+            if (!name || !email || !phone) return;
+
+            // Add new row
+
+            allRows.push([name, email, phone]);
+
+            // Create Excel content
+
+            let xlsContent = "Name\tEmail\tPhone\n"; // Header
+
+            allRows.forEach(row => {
+
+                xlsContent += row.join("\t") + "\n";
+
+            });
+
+            // Create blob and trigger download
+
+            const blob = new Blob([xlsContent], {
+
+                type: "application/vnd.ms-excel",
+
+            });
+
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement("a");
+
+            a.href = url;
+
+            a.download = "form_data.xls";
+
+            document.body.appendChild(a);
+
+            a.click();
+
+            document.body.removeChild(a);
+
+            URL.revokeObjectURL(url);
+
+            // Clear form
+
+            this.reset();
+
+        });
+    </script>
+</body>
+
+</html>
