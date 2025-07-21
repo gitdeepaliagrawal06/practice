@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript-Integrate and Dom Manuplation</title>
+</head>
+
+<body>
+    <button class="lion">
+        Click me
+    </button>
+
+    <button id="hello" class="jk">
+        Google
+    </button>
+
+
+    <script>
+        /*How to use click event internally*/
+        document.querySelector('[id="hello"]').addEventListener('click', function () {
+            // alert('Hello Deepali, World')
+
+            let a = document.querySelector('.lion')
+
+            let b = a.style
+
+            a.innerHTML = 'Yahoo'
+
+
+            b.backgroundColor = 'red'
+
+            b.fontSize = '22px'
+
+            b.padding = '30px'
+
+
+
+
+        })
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
