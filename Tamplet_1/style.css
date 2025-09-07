@@ -28,8 +28,6 @@ body {
     display: flex;
     gap: 20px;
     align-items: center;
-
-
 }
 
 .sec2 div:nth-child(2) span:nth-child(1) {
@@ -41,7 +39,6 @@ body {
     color: white;
     padding: 10px;
     border-radius: 5px;
-
 }
 
 .sec2 div:nth-child(1) {
@@ -53,10 +50,48 @@ body {
     content: '.';
     position: absolute;
     color: #fe4d29;
-
 }
-
 
 .icon {
     color: white;
+}
+
+.sec3 {
+    background: linear-gradient(#11111131, #111111ad), url("./pexels-photo-3756678.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    /* padding-left: 200px; */
+    align-items: center;
+    padding: 20px;
+}
+
+.sec3 div:nth-child(1) span:nth-child(3) {
+    background-color: #fe4d29;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid #fe4d29;
+    margin-right: 20px;
+}
+
+.sec3 .hero-content span {
+    background: black;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    gap: 20px;
+    border: 2px solid white;
+}
+
+.gwfg {
+    font-size: 50px;
+}
+
+.sec3a {
+    display: flex;
+    align-items: center;
+    gap: 100px;
 }
