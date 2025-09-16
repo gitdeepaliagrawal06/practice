@@ -1,0 +1,81 @@
+<!-- 
+ 1. Function Declaration: These functions are Hoisted.
+ 2. Function Expression: These functions are not Hoisted.
+ 3. Arrow Function: Small Anonymous Function used for callbacks  -->
+
+<script>
+    //Function Declaration: 
+    function add(a, b) {
+        return a + b;
+    }
+    console.log(add(10, 20));// 30
+
+    //---------------------------------------------------------    
+    //Function Expression
+    let add2 = function (a, b) {
+        return a + b;
+    }
+    let result = add2(100, 200)
+    console.log("Result Value is: ", result)// 300
+
+    <!------Multiplication---->
+    // Function Declaration
+    function mul(a, b) {
+        return a * b;
+    }
+    console.log(mul(7, 5)); //35
+    //-----------------------------------------------
+    function mul1(a, b) {
+        console.log(mul1(a * b));
+    }
+    mul(10, 20);
+    //---------------------------------------------------------
+    //Function Expression
+    let mul2 = function (a, b) {
+        return a * b;
+    }
+    let result2 = mul2(34, 65);
+    console.log(" Result Value is:", result2)// 2210
+    //------------------------------------------------------
+
+    let mul4 = function (a, b) {
+        //mul4(10, 20)
+        console.log(a * b);
+    }
+    mul4(10, 20)// 200
+
+    //----------------------------------------------------
+
+    //Arrow Function:
+
+    let ar = (a, b) => {
+        console.log(a / b);
+    }
+    ar(20, 30)
+
+
+    //WAP to print greeting message to the user: -->
+    //Function Declaration
+
+
+    function greet(name) {
+        console.log('Hello', name);
+    }
+    greet1('Akash');
+
+
+
+    //Function Expression -- >
+
+    let greet2 = function (name) {
+        console.log("Hello", name);
+    }
+
+        < !--
+        //Arrow Function:
+        // If we have one expression in function body {} not required  -->
+        let greet3 = (name) => {
+            console.log("Hello", name);
+        }
+
+</script>

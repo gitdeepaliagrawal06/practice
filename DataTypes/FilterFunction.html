@@ -1,0 +1,25 @@
+<script>
+
+    let arr = [1, 2, 3, 4]
+    console.log(arr);
+    // Argument Function------> CallBack
+    // Filter is Higher Order function
+    even = arr.filter((ele) => ele % 2 === 0);
+    console.log(even);
+
+
+
+    arr1 = [1, 2, 3, 4]
+    even = arr1.filter(function (ele) {
+        if (ele % 2 === 0) {
+            return ele;
+
+        }
+    });
+    console.log(even);
+
+
+
+
+
+</script>
