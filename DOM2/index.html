@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>getElementByClassName()</title>
+</head>
+
+<body>
+
+    <p class="container">Para 1</p>
+    <p class="container">Para 2</p>
+    <p class="container">Para 3</p>
+
+    <button onclick="fun()">Click</button>
+
+    <script>
+
+        function fun() {
+            const target = document.getElementsByClassName('container') // target all the element where specified className matching is there
+            console.log("Length Before dom update is : ", target.length);
+
+            const newEle = document.createElement('p'); //<p> </p>
+            console.log(newEle);
+            newEle.textContent = "Hello"; // add the content in the element <p>Hello</p>
+            newEle.classList.add('container'); //add the classname in the element <p class="container">Hello</p>
+            document.body.appendChild(newEle);
+            console.log("Length after Dom updated is : ", target.length); // Live collection
+
+
+        }
+    </script>
+
+</body>
+
+</html>

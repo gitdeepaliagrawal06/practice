@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>querySelectorAll()</title>
+
+
+</head>
+
+<body>
+
+    <p class="para">Paragraph 1</p>
+    <p class="para">Paragraph 2</p>
+    <button onclick="fun()">Click</button>
+
+    <script>
+        function fun() {
+
+
+            const target = document.querySelectorAll('.para');
+            console.log(target) // static NodeList
+            console.log('Length before updating the DOM: ', target.length);
+
+            const newEle = document.createElement('p');
+            newEle.textContent = 'Paragraph 3';
+            newEle.classList.add('para');
+            document.body.appendChild(newEle);
+            console.log('Length After updating the DOM:', target.length);
+
+        }
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

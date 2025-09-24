@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to use InnerHTML tag</title>
+</head>
+
+<body>
+
+    <p class="container">para1</p>
+    <p class="container">para2</p>
+    <p class="container">para3</p>
+
+    <button onclick="fun()">Click</button>
+
+
+    <script>
+        function fun() {
+
+            const target = document.getElementsByClassName('container');
+            console.log("Length Before DOM update is:", target.length);
+
+
+            const newEle = document.createElement('div'); //<div></div>
+            newEle.innerHTML = `<h3 style='color:blue'>Hello</h3>`;
+            //<div><h3 style='color:blue'>Hello</h3></div>
+
+            newEle.classList.add('container');
+            document.body.appendChild(newEle);
+            console.log("Length after DOM Update is :", target.length)
+
+        }
+
+    </script>
+</body>
+
+</html>
