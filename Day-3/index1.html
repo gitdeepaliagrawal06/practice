@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document1</title>
+</head>
+
+<body>
+    <p class="con">para1</p>
+    <p class="con">para2</p>
+    <p class="con">para3</p>
+
+    <button onclick="fun()">Click</button>
+
+
+    <script>
+        function fun() {
+
+            const target = document.getElementsByClassName('con');
+            console.log('Length of element before DOM update :', target.length);
+
+            const newEle = document.createElement('div');
+            newEle.innerHTML = `Hello`;
+
+            newEle.classList.add('con');
+            document.body.appendChild(newEle);
+            console.log('Length of element before DOM update :', target.length);
+
+        }
+    </script>
+</body>
+
+</html>

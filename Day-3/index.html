@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>How to use InnerHTML tag</title>
+</head>
+
+<body>
+    <p class="con">para1</p>
+    <p class="con">para2</p>
+    <p class="con">para3</p>
+
+    <button onclick="fun()">Click</button>
+
+
+    <script>
+        function fun() {
+
+            const target = document.getElementsByClassName('con'); // target the element
+            console.log('Length Before DOM update is:', target.length);
+
+
+            const newEle = document.createElement('div');//create element inside the dom
+            newEle.innerHTML = `Hello`;
+
+            newEle.classList.add('con'); // add in the list of paragraph
+            document.body.appendChild(newEle); //after adding show in dom
+            console.log('Length After DOM update is:', target.length);
+        }
+    </script>
+
+</body>
+
+
+</html>
