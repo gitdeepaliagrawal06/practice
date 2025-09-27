@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>List App using OLtag</title>
+</head>
+
+<body>
+
+    <input id="ItemInputBox" type="text" placeholder="Types of Item...">
+
+    <button onclick="fun()">Add to List</button>
+
+    <ol id="itemList"></ol>
+
+    <script>
+
+        function fun() {
+
+            const target = document.getElementById('ItemInputBox');
+            console.log('Input Box Value :', target.value);
+
+            if (target.value != "") {
+                const newItem = document.createElement('li');
+                newItem.textContent = target.value;
+                document.getElementById('itemList').appendChild(newItem);
+                target.value = "";
+
+            }
+
+
+
+
+
+
+        }
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

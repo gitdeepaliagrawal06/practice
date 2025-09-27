@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>List App using ULtag</title>
+</head>
+
+<body>
+
+    <input type="text" id="itemInputBox" placeholder="Type an Item..">
+
+    <button onclick="fun()">Add to List</button>
+
+    <ul id="itemList"></ul>
+
+    <script>
+
+        function fun() {
+
+            // 1. Get the input box
+            const target = document.getElementById('itemInputBox');
+            console.log('Input Box Value :', target.value);
+            // 2. only add value if input is not empty
+            if (target.value != "") {
+                // 3. Create a new list item <li>
+                const newItem = document.createElement('li');
+                // 4. Put the input text inside the <li>
+                newItem.textContent = target.value;
+                // 5.Find the < ul > and add the new < li > inside it
+                document.getElementById('itemList').appendChild(newItem);
+                // 6. Clear the input box
+                target.value = "";
+            }
+
+
+
+
+
+
+
+
+        }
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

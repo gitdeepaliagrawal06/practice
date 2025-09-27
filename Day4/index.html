@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>To do list App</title>
+</head>
+
+<body>
+
+    <input id="itemInputBox" type="text" placeholder="Enter any Item">
+    <button onclick="fun()">Add</button>
+
+</body>
+
+
+<script>
+
+    function fun() {
+
+        const target = document.getElementById('itemInputBox'); // Find the input box by its id
+        console.log('Input Box Value :', target.value); // Log the current value typed inside the input box
+
+        if (target.value != "") { // Only continue if the input is not empty
+            const newEle = document.createElement('p'); //Create a new <p> element (paragraph) in memory
+            newEle.innerHTML = target.value;//Put the input text inside the <p>
+            document.body.appendChild(newEle); //Add the new <p> into the <body> so it appears on the page
+            target.value = ""; //Clear the input box so user can type again
+        }
+
+    }
+
+
+</script>
+
+</html>
