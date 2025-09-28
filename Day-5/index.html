@@ -24,15 +24,16 @@
             const itemName = document.getElementById('ItemInputBox');
             // Get the <ul> element where items will be added
             const itemList = document.getElementById('itemList');
-            //Create a new list item <li>
-            const item = document.createElement('li');
-            // Set the text of the new list item from the input value
-            item.innerText = itemName.value;
-            // Add the new <li> into the <ul>
-            itemList.appendChild(item);
-            // Clear the input box after adding
-            itemName.value = "";
-
+            if (itemName.value != "") {
+                //Create a new list item <li>
+                const item = document.createElement('li');
+                // Set the text of the new list item from the input value
+                item.innerText = itemName.value;
+                // Add the new <li> into the <ul>
+                itemList.appendChild(item);
+                // Clear the input box after adding
+                itemName.value = "";
+            }
         }
         // Function that runs when a key is pressed in the input box
         function enterFunction(e) {
@@ -44,6 +45,7 @@
             if (e.key === 'Enter') {
                 // Call the fun() function to add the item
                 fun();
+
             }
 
 
