@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>How to use Enter Key</title>
+</head>
+
+<body>
+    <!-- Input box 
+             onkeyup = run "enterFunction" every time a key is released -->
+    <input onkeyup="enterFunction(event)" id="ItemInputBox" type="text" placeholder="Enter list item" />
+    <!-- Button to add items manually -->
+    <button onclick="fun()">Add to List</button>
+    <!-- Empty list where items will be added -->
+    <ul id="itemList"></ul>
+
+
+
+    <script>
+        // Function to add item into the list
+        function fun() {
+            // Get the input box element
+            const itemName = document.getElementById('ItemInputBox');
+            // Get the <ul> element where items will be added
+            const itemList = document.getElementById('itemList');
+            //Create a new list item <li>
+            const item = document.createElement('li');
+            // Set the text of the new list item from the input value
+            item.innerText = itemName.value;
+            // Add the new <li> into the <ul>
+            itemList.appendChild(item);
+            // Clear the input box after adding
+            itemName.value = "";
+
+        }
+        // Function that runs when a key is pressed in the input box
+        function enterFunction(e) {
+            // show in console for learning
+            console.log("Key press detected");
+            // print which key was pressed
+            console.log(e.key);
+            // Check if the pressed key was "Enter"
+            if (e.key === 'Enter') {
+                // Call the fun() function to add the item
+                fun();
+            }
+
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

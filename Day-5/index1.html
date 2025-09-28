@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Beginner Level List Practice</title>
+</head>
+
+<!-- 1. Item add hoga button ya Enter key se
+
+2. Agar input khaali ho to item add nahi hoga
+
+3. Ek “Clear All” button hoga jo pura list empty kar dega
+
+4. Har item ke aage number (1, 2, 3...) hoga
+ -->
+
+<body>
+
+    <!-- Input box -->
+    <input onkeyup="enterFunction(event)" id="ItemInputBox" type="text" placeholder="Enter list item" />
+
+    <!-- Add button -->
+    <button onclick="addItem()">Add to List</button>
+
+    <!-- Clear all button -->
+    <button onclick="clearAll()">Clear All</button>
+
+    <!-- List container -->
+    <ul id="itemList"></ul>
+
+    <script>
+        // Counter to keep track of item numbers
+        let count = 0;
+
+        // Function to add an item
+        function addItem() {
+            const itemName = document.getElementById('ItemInputBox');
+            const itemList = document.getElementById('itemList');
+
+            // Prevent empty input
+            if (itemName.value  === "") {
+                alert("Please enter something!");
+                return;
+            }
+
+            // Increase item number
+            count++;
+
+            // Create new list item
+            const item = document.createElement('li');
+
+            // Add number + text
+            item.innerText = count + ". " + itemName.value;
+
+            // Add item to the list
+            itemList.appendChild(item);
+
+            // Clear input
+            itemName.value = "";
+        }
+
+        // Function to clear all items
+        function clearAll() {
+            const itemList = document.getElementById('itemList');
+            itemList.innerHTML = ""; // removes all <li>
+            count = 0; // reset counter
+        }
+
+        // Function to handle Enter key press
+        function enterFunction(e) {
+            if (e.key === 'Enter') {
+                addItem();
+            }
+        }
+    </script>
+
+</body>
+
+</html>
