@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Maximum of Two Numbers</title>
+</head>
+
+<body>
+
+    <!-- Two input boxes for numbers -->
+    <input onkeyup="enterFunction(event)" type="number" id="NumberInputBox1" placeholder="Enter First Number">
+    <input onkeyup="enterFunction(event)" type="number" id="NumberInputBox2" placeholder="Enter Second Number">
+
+    <!-- Button to check maximum -->
+    <button onclick="checkMax()">Check Maximum</button>
+
+    <!-- List to show result -->
+    <ul id="numList"></ul>
+    <script>
+
+        function checkMax() {
+
+            const num1 = document.getElementById('NumberInputBox1').value;
+            const num2 = document.getElementById('NumberInputBox2').value;
+            const numberList = document.getElementById('numList');
+
+            if (num1 != "" && num2 != "") {
+
+                let result;
+                // Compare numbers
+
+                if (num1 > num2) {
+                    result = num1 + "is bigger than " + num2;
+                } else if (num2 > num1) {
+                    result = num2 + " is bigger than " + num1;
+                } else {
+                    result = num1 + "and" + b + " are equal";
+                }
+
+                // create a new list item
+                const number = document.createElement('li');
+                number.innerText = result;
+
+                numberList.appendChild(number);
+
+                // Clear input boxes
+                document.getElementById('NumberInputBox1').value = "";
+                document.getElementById('NumberInputBox2').value = "";
+            }
+        }
+
+        // Function to run when a key is pressed in input box
+        function enterFunction(e) {
+            // If Enter key is pressed, call checkNumber()
+            if (e.key === 'Enter') {
+                checkMax();
+            }
+        }
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

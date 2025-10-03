@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Using Built-in Functions (split, reverse, join)</title>
+</head>
+
+<body>
+
+    <script>
+
+        function reverseString1(str) {
+            // Step 1: split("") turns the string into an array of characters
+            // Example: "hello" -> ["h","e","l","l","o"]
+            let arr = str.split("");
+
+            // Step 2: reverse() reverses the array
+            // Example: ["h","e","l","l","o"] -> ["o","l","l","e","h"]
+            arr.reverse();
+
+            // Step 3: join("") combines array back into a string
+            // Example: ["o","l","l","e","h"] -> "olleh"
+            let reversed = arr.join("");
+
+            // Step 4: return the reversed string
+            return reversed;
+        }
+
+        console.log(reverseString1("hello")); // "olleh"
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

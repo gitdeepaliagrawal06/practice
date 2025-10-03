@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Using a for loop</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        function reverseString2(str) {
+            // Start with an empty string to store the result
+            let reversed = "";
+
+            // Loop from the last character to the first
+            for (let i = str.length - 1; i >= 0; i--) {
+                // Add each character one by one
+                reversed += str[i];
+            }
+
+            // Return the reversed string
+            return reversed;
+        }
+
+        console.log(reverseString2("hello")); // "olleh"
+
+
+    </script>
+
+
+
+</body>
+
+</html>

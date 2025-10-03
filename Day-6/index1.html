@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Positive, Negative, or Zero</title>
+</head>
+
+<body>
+    <!-- Input box where user will type a number -->
+    <input onkeyup="enterFunction(event)" id="NumberInputBox" type="text" placeholder="Enter Number">
+    <!-- Button to check number -->
+    <button onclick="checkNumber()">Check Number</button>
+    <!-- List where results will appear -->
+    <ul id="numlist"></ul>
+
+    <script>
+
+
+        // Function to check if the number is Positive, Negative, or Zero
+        function checkNumber() {
+            // Get the input box element
+            const numberItem = document.getElementById('NumberInputBox');
+            // Get the <ul> element where results will be added
+            const numberList = document.getElementById('numlist');
+
+            // Only proceed if input is not empty
+            if (numberItem.value != "") {
+                // Variable to store the result text
+                let result;
+                // Check if number is Positive, Negative, or Zero
+                if (numberItem.value > 0) {
+                    result = numberItem.value + " is Positive"; // Number is greater than 0
+
+                } else if (numberItem.value < 0) {
+                    result = numberItem.value + " is Negative"; // Number is less than 0
+                } else (numberItem.value = 0)
+                {
+                    result = numberItem.value + " is Zero"; // Number is exactly 0
+
+                }
+                // Create a new <li> element to show the result
+                const number = document.createElement('li');
+                // Add result text inside <li>
+                number.innerText = result;
+                // Add the <li> to the list
+                numberList.appendChild(number);
+                // Clear the input box for next number
+                numberItem.value = "";
+            }
+        }
+
+        // Function to run when a key is pressed in input box
+        function enterFunction(e) {
+            // If Enter key is pressed, call checkNumber()
+            if (e.key === 'Enter') {
+                checkNumber();
+            }
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

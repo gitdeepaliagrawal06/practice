@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Odd and Even</title>
+</head>
+
+<body>
+
+    <input onkeyup="enterFunction(event)" type="text" id="NumberInputBox" placeholder="Enter Number">
+    <button onclick="oddEvenNum()">Check Number</button>
+    <p id=""></p>
+
+
+    <script>
+
+
+        function oddEvenNum() {
+
+            // 1.  Access the NumberInputBox.
+            const itemNumber = document.getElementById('NumberInputBox');
+
+            // 2. only add value if input is not empty
+            if (itemNumber.value != "") {
+
+                const num = (itemNumber.value);
+
+                let msg;
+
+                if (num % 2 === 0) {
+                    msg = num + " is Even";
+
+                } else {
+
+                    msg = num + " is odd";
+                }
+                const ptag = document.createElement('p');
+                ptag.innerText = msg;
+                itemNumber.appendChild(ptag);
+
+
+
+
+
+
+
+            }
+
+
+        }
+
+        // Function that runs when key is pressed
+
+        function enterFunction(e) {
+
+            if (e.key === 'Enter') {
+                oddEvenNum();
+            }
+
+
+        }
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
