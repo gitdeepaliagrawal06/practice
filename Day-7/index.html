@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Multiplication</title>
+</head>
+
+<body>
+
+  <input onkeyup="enterFunction(event)" type="text" id="NumberInputBox" placeholder="Enter Number">
+
+  <button onclick="generateTable()">Show Table</button>
+
+  <div id="er-uj">
+  </div>
+
+
+  <script>
+
+    function generateTable() {
+
+
+      const itemNumber = document.getElementById('NumberInputBox');
+      const divcontrol = document.getElementById('er-uj');
+      const table = itemNumber.value;
+
+
+      if (table != "") {
+        const num = table;
+
+        for (let i = 1; i <= 10; i++) {
+          const ptag = document.createElement('p');
+          ptag.innerText = num * i;
+          // document.body.appendChild(ptag);
+          divcontrol.append(ptag);
+          itemNumber.value = "";
+        }
+
+      }
+    }
+
+    // Function runs when user presses a key inside input box
+
+    function enterFunction(e) {
+      // If key pressed is Enter → call oddEvenNum()
+      if (e.key === 'Enter') {
+        generateTable();
+      }
+    }
+
+  </script>
+
+
+
+
+
+</body>
+
+</html>

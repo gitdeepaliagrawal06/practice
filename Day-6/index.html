@@ -7,62 +7,51 @@
 </head>
 
 <body>
-
+    <!-- Input box where user will type number -->
     <input onkeyup="enterFunction(event)" type="text" id="NumberInputBox" placeholder="Enter Number">
+    <!-- Button to check number -->
     <button onclick="oddEvenNum()">Check Number</button>
-    <p id=""></p>
+    <!-- Paragraph tag to show result -->
+    <p id="pTag"></p>
 
 
     <script>
-
+        // Function to check if number is Odd or Even
 
         function oddEvenNum() {
 
-            // 1.  Access the NumberInputBox.
+            // 1.  Access the NumberInputBox element
             const itemNumber = document.getElementById('NumberInputBox');
+
 
             // 2. only add value if input is not empty
             if (itemNumber.value != "") {
-
+                // Store value from input box (still as string)
                 const num = (itemNumber.value);
-
+                // Variable to hold result message
                 let msg;
-
+                // 3. Check condition: Even or Odd
                 if (num % 2 === 0) {
-                    msg = num + " is Even";
+                    msg = num + " is Even";  // If divisible by 2 → Even
 
                 } else {
 
-                    msg = num + " is odd";
+                    msg = num + " is odd";  // Else → Odd
                 }
-                const ptag = document.createElement('p');
-                ptag.innerText = msg;
-                itemNumber.appendChild(ptag);
-
-
-
-
-
-
-
+                // 4. Show result inside <p> tag
+                const result = document.getElementById('pTag');
+                result.innerText = msg;
             }
-
-
         }
 
-        // Function that runs when key is pressed
+        // Function runs when user presses a key inside input box
 
         function enterFunction(e) {
-
+            // If key pressed is Enter → call oddEvenNum()
             if (e.key === 'Enter') {
                 oddEvenNum();
             }
-
-
         }
-
-
-
 
     </script>
 

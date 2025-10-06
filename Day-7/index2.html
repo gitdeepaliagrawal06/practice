@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Full Name Generator</title>
+</head>
+<input onkeyup="enterFunction(event)" type="text" id="fname" placeholder="Enter First Name">
+<input onkeyup="enterFunction(event)" type="text" id="lname" placeholder="Enter Last Name">
+
+<button onclick="showFullName()">Show Full Name</button>
+
+<p id="fullname"></p>
+
+<script>
+  function showFullName() {
+
+    const first = document.getElementById('fname');
+    const last = document.getElementById('lname');
+    const result = document.getElementById('fullname');
+
+    if (first.value != "" && last.value != "") {
+      result.innerText = "Full Name: " + first.value + " " + last.value;
+
+    }
+    first.value = "";
+    last.value = "";
+
+  }
+
+</script>
+
+<body>
+
+</body>
+
+</html>

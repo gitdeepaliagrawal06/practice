@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Number Checker</title>
+</head>
+
+<input onkeyup="enterFunction(event)" id="numbox" type="text" placeholder="Enter Number">
+
+<button onclick="checkNumber()">Check Number</button>
+<p id="numRes"></p>
+
+<body>
+  <script>
+    function checkNumber() {
+
+      const numberBox = document.getElementById('numbox');
+      const result = document.getElementById('numRes');
+
+      const number = numberBox.value;
+
+      if (number != "") {
+
+        if (number > 0) {
+          result.innerText = "Show positive Value";
+        }
+        else if (number < 0) {
+          result.innerText = "Show negative Value"
+        }
+        else {
+          result.innerText = "Show Zero"
+        }
+
+      }
+
+      numberBox.value = "";
+
+
+
+    }
+
+
+
+
+
+  </script>
+</body>
+
+</html>

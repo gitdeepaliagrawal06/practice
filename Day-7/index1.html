@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Age Checker</title>
+</head>
+
+<input onkeyup="enterFunction(event)" type="text" placeholder="Enter your age" id="age_input">
+<button onclick="checkAge()">Age Checker</button>
+<p id="result"></p>
+
+<body>
+
+  <script>
+    function checkAge() {
+      const ageInput = document.getElementById('age_input');
+      const ageResult = document.getElementById("result");
+      const age = ageInput.value;
+      if (age != "") {
+
+
+        if (age < 18) {
+          ageResult.innerText = "Age is below 18"
+        }
+        // If age is 18 or above
+        else {
+          ageResult.innerText = "Age is above 18"
+        }
+
+      }
+      ageInput.value = "";
+
+    }
+
+    // Function to run when a key is pressed in input box
+    function enterFunction(e) {
+      // If Enter key is pressed, call checkNumber()
+      if (e.key === 'Enter') {
+        checkAge();
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>
