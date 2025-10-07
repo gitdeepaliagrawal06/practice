@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Arrays</title>
+
+</head>
+
+<body>
+
+  <script>
+    // You can Declare empty or non-empty arrays
+
+    const fruits = ["Mango", "Banana"];
+    const cars = [];
+
+    // // To add any element to array
+    // fruits.push("Kiwi");
+    // console.log(fruits); //This will give ["Mango", "Banana", "Kiwi"]
+    //Kiwi gets added at last
+    //----------------------Using POP()---------------------------------------
+    fruits.pop();
+    console.log(fruits);//This will give ["Mango", "Banana"]
+    fruits.pop();
+    console.log(fruits);// This will give ["Mango"] --doubt
+
+
+    // Method 1 to delete all array elements
+    // for(let i = 0; i<2; i++){
+    //     fruits.pop();
+    // }
+
+    // Method 2
+    // fruits = []; // This method is not used because w eusually declare our array objects as constants
+
+    // Method 3
+    fruits.length = 0;
+    console.log(fruits);
+
+    // Now we will see slice and splice
+    const bikes = ["activa", "Jupiter", "Access", "honda"];
+
+    const isActivaPresent = bikes.includes("activa");
+    console.log(isActivaPresent);
+
+    const indexOfActiva = bikes.indexOf("activa");
+    console.log(indexOfActiva);
+    console.log(bikes);
+
+
+
+
+
+
+
+
+
+  </script>
+
+
+
+
+
+
+</body>
+
+</html>
