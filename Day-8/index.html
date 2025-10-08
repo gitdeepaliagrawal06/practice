@@ -40,13 +40,48 @@
     // Now we will see slice and splice
     const bikes = ["activa", "Jupiter", "Access", "honda"];
 
-    const isActivaPresent = bikes.includes("activa");
-    console.log(isActivaPresent);
+    // const isActivaPresent = bikes.includes("activa");
+    // console.log(isActivaPresent);
 
-    const indexOfActiva = bikes.indexOf("activa");
-    console.log(indexOfActiva);
-    console.log(bikes);
+    // const indexOfActiva = bikes.indexOf("activa");
+    // console.log(indexOfActiva);
+    // console.log(bikes);
+    // Slice will return you a copy
+    // ADDITIONAL FEATURE: if you specify start index, end index, then it will copy only that much
+    // const copyOfBikesArray = bikes.slice();
+    // console.log("Bikes array: ", bikes);
+    // console.log("copyOfBikesArray: ", copyOfBikesArray);
 
+    //const copy2 = bikes.slice(1, 2);
+    console.log("Bike array: ", bikes);
+    // console.log("copy2 array: ", copy2);
+
+    // Splice
+    //["activa", "Jupiter", "Access", "honda"];
+    const splicedArray = bikes.splice(0, 2);
+    console.log("Bike array: ", bikes);//activa, honda
+    console.log("splicedArray : ", splicedArray);//"Jupiter", "Access"
+
+    // Final usage of these functions together
+    // 
+    const animals = ["dog", "cat", 'horse', 'fish', 'parrot'];
+
+    // I want to remove fish from this array
+    const removedAnimals = animals.splice(3, 1);
+    console.log("animals array : ", animals);
+
+    // If the location of 'fish' changes, then we will need a bit of different logic
+    const animals1 = ['fish', "dog", "cat", 'horse', 'parrot'];
+    const indexOfFish = animals1.indexOf('fish');
+    // I want to remove fish from this array
+    animals1.splice(indexOfFish, 1);
+    console.log("animals1 array : ", animals1);
+
+
+    // User will give tasks
+    // Save each of those tasks in array
+
+    const tasks = ["Buy clothes", "Wash utensils", "buy groceries", 'buy toys'];
 
   </script>
 
