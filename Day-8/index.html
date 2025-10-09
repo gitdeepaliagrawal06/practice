@@ -43,14 +43,14 @@
     // const isActivaPresent = bikes.includes("activa");
     // console.log(isActivaPresent);
 
-    // const indexOfActiva = bikes.indexOf("activa");
-    // console.log(indexOfActiva);
-    // console.log(bikes);
+    const indexOfActiva = bikes.indexOf("activa");
+    console.log(indexOfActiva);
+    console.log(bikes);
     // Slice will return you a copy
     // ADDITIONAL FEATURE: if you specify start index, end index, then it will copy only that much
-    // const copyOfBikesArray = bikes.slice();
-    // console.log("Bikes array: ", bikes);
-    // console.log("copyOfBikesArray: ", copyOfBikesArray);
+    const copyOfBikesArray = bikes.slice();
+    console.log("Bikes array: ", bikes);
+    console.log("copyOfBikesArray: ", copyOfBikesArray);
 
     //const copy2 = bikes.slice(1, 2);
     console.log("Bike array: ", bikes);
@@ -59,8 +59,8 @@
     // Splice
     //["activa", "Jupiter", "Access", "honda"];
     const splicedArray = bikes.splice(0, 2);
-    console.log("Bike array: ", bikes);//activa, honda
-    console.log("splicedArray : ", splicedArray);//"Jupiter", "Access"
+    console.log("Bike array: ", bikes);//['Access', 'honda']
+    console.log("splicedArray : ", splicedArray);//"activa", "Jupiter"
 
     // Final usage of these functions together
     // 

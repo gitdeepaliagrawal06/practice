@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Splice-Method</title>
+</head>
+
+<body>
+
+  <script>
+    // Removing Element
+    const animal = ["dog", "cat", "rat", "fish", "snake"];
+
+    console.log(animal);
+    const removeElement = animal.splice(0, 3);
+
+    console.log("Remove Element Array:", removeElement);
+    console.log("Original Array", animal);
+    //------------------------------------------------------
+    const bikes = ["activa", "Jupiter", "Access", "honda"];
+
+    const splicedArray = bikes.splice(0, 1);
+    console.log("splicedArray : ", splicedArray);//['activa', 'Jupiter']
+    console.log("Bike array: ", bikes);//['Access', 'honda']
+
+    // Adding element
+
+    const fruits = ['apple', 'banana', 'cherry'];
+    fruits.splice(2, 0, 'grape', 'lemon'); // At index 2, remove 0 elements, then add 'grape' and 'lemon'
+    console.log(fruits);
+    // fruits is now ['apple', 'banana', 'grape', 'lemon', 'cherry']
+
+    // Replacing element
+
+    const colors = ['red', 'green', 'blue'];
+    colors.splice(1, 1, 'yellow'); // At index 1, remove 1 element ('green'), then add 'yellow'
+    console.log(colors);
+    // colors is now ['red', 'yellow', 'blue']
+
+
+
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>
