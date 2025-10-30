@@ -2,7 +2,7 @@
 Last Updated : 11 Jul, 2025
 The splice() method in JavaScript is a powerful and flexible tool for modifying arrays. It allows us to add, remove, or replace elements within an array. It’s often used to update or manage array contents in various ways.
 
-## Syntax
+## Syntax 
 
 array.splice(startIndex, deleteCount, item1, item2, ..., itemN);
 

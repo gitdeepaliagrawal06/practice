@@ -15,12 +15,16 @@
     // Create an array of student names
     const sName = ["Tanmay", "Riya", "Vijay", "Ankita", "Rahul", "Divya"];
     console.log("Original name Array", sName);
+
     // Add a new name at the end
-    sName.push("Rajeev");
-    console.log("Add new name :", sName);
+    const pushName = sName.push("Rajeev");
+    console.log("Add new name :", pushName);
+
     // Remove one name from the middle using splice() (e.g., remove "Ankita")
     sName.splice(3, 1);
     console.log("Remove name from array:", sName);
+
+
     // Copy the first 3 names into a new array using slice()
     const topStudent = sName.slice(0, 3);
     console.log("Top Student: ", topStudent);

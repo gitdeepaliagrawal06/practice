@@ -8,12 +8,9 @@ end: Parameter specifying the end index for extracting a portion from an array, 
 Return value:
 This method returns a new array containing some portion of the original array. 
 
-Example 1: Extracting elements between two indexes
+## Example 1: Extracting elements between two indexes
 
-Here, the slice() method extracts the array from the given array starting from index 2 and including all the elements less than index 4.
-
-
-
+## Here, the slice() method extracts the array from the given array starting from index 2 and including all the elements less than index 4.
 
 function func() {
     // Original Array
@@ -28,12 +25,10 @@ func();
 Output
 [ 23, 56, 87, 32, 75, 13 ]
 [ 87, 32 ]
-Example 2: Passing no arguments
 
-Here, the slice() method extracts the entire array from the given string and returns it as the answer, Since no arguments were passed to it.
+## Example 2: Passing no arguments
 
-
-
+## Here, the slice() method extracts the entire array from the given string and returns it as the answer, Since no arguments were passed to it.
 
 function func() {
     //Original Array
@@ -48,12 +43,10 @@ func();
 Output
 [ 23, 56, 87, 32, 75, 13 ]
 [ 23, 56, 87, 32, 75, 13 ]
-Example 3: Extracting array from index 2
 
-In this example, the slice() method extracts the array starting from index 2 till the end of the array and returns it as the answer.
+## Example 3: Extracting array from index 2
 
-
-
+## In this example, the slice() method extracts the array starting from index 2 till the end of the array and returns it as the answer.
 
 function func() {
 ​
@@ -70,12 +63,10 @@ func();
 Output
 [ 23, 56, 87, 32, 75, 13 ]
 [ 87, 32, 75, 13 ]
-Example 4: Slicing the nested Array
 
-In this example, the slice() method extracts the elements from the nested array and returns it as the answer.
+## Example 4: Slicing the nested Array
 
-
-
+## In this example, the slice() method extracts the elements from the nested array and returns it as the answer.
 
 function func() {
 ​
